@@ -1,0 +1,23 @@
+# =================================================================
+# SpeakPath AI - Render Blueprint (https://render.com)
+# =================================================================
+# Deploy the backend Node.js + WebSocket service on Render Free Tier.
+# Persistent WebSockets at /api/live/ws for Gemini Live bidirectional voice.
+
+services:
+  - type: web
+    name: speakpath-api
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000

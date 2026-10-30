@@ -1,0 +1,19 @@
+{
+  "name": "speakpath-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SpeakPath AI — Personal Voice-Based English Coach for Engineering Students",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}

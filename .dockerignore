@@ -1,0 +1,12 @@
+node_modules
+client/node_modules
+server/node_modules
+.git
+.env
+.env.local
+dist
+client/dist
+server/dist
+temp_agent_starter
+temp_ebot
+*.log
