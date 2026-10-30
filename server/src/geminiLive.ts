@@ -283,7 +283,7 @@ export function handleGeminiLiveWebSocket(clientWs: WebSocket) {
     }
   });
 
-  clientWs.on('error', (wsErr) => {
+  clientWs.on('error', (wsErr: any) => {
     console.error('Client WebSocket error:', wsErr);
     if (session) {
       try {
